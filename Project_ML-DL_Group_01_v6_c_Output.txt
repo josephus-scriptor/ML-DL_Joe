@@ -1,0 +1,55 @@
+With "balanced_accuracy"
+
+=== MODEL TRAINING ===
+
+========================================
+Training RandomForest...
+========================================
+
+RandomForest Best Parameters: {'clf__max_depth': 5, 'clf__min_samples_split': 2, 'clf__n_estimators': 100}
+Test ROC-AUC: 0.6207
+Test Recall: 0.5134
+
+========================================
+Training LightGBM...
+========================================
+
+LightGBM Best Parameters: {'clf__learning_rate': 0.05, 'clf__max_depth': 5, 'clf__min_child_samples': 50, 'clf__n_estimators': 100, 'clf__num_leaves': 31}
+Test ROC-AUC: 0.6283
+Test Recall: 0.5248
+
+
+=== MODEL COMPARISON ===
+          Model                                        Best Params  Accuracy  \
+1      LightGBM  {'clf__learning_rate': 0.05, 'clf__max_depth':...     0.627   
+0  RandomForest  {'clf__max_depth': 5, 'clf__min_samples_split'...     0.639   
+
+   Precision    Recall  F1-Score   ROC-AUC  
+1   0.356218  0.524809  0.424383  0.628269  
+0   0.365489  0.513359  0.426984  0.620709  
+
+Best Model: LightGBM (ROC-AUC: 0.6283)
+
+Optimal threshold: 0.4482 (default=0.5)
+
+Optimized Performance:
+Accuracy: 0.5595
+Precision: 0.3308
+Recall: 0.6660
+F1-Score: 0.4421
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0     0.7374    0.9953    0.8472      1476
+           1     0.1250    0.0019    0.0038       524
+
+    accuracy                         0.7350      2000
+   macro avg     0.4312    0.4986    0.4255      2000
+weighted avg     0.5770    0.7350    0.6262      2000
+
+
+
+With "f1"
+
+Same results
