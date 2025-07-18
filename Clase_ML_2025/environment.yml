@@ -1,0 +1,15 @@
+name: ds-keras-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - scipy
+  - tensorflow
+  - scikeras
+  - jupyterlab
+  - notebook
